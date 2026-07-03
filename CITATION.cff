@@ -5,7 +5,7 @@ authors:
   - family-names: "Chen"
     given-names: "Yifan"
 repository-code: "https://github.com/Wangziqi0/Open-MaoField"
-version: "0.1-public-draft"
+version: "0.2-v2.5-final-synthesis-public-draft"
 date-released: "2026-07-03"
 license: "Apache-2.0"
 keywords:

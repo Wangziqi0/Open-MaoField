@@ -7,7 +7,7 @@ decoding artifacts, smoothing trends, judge protocols, aggregation weights and
 coordinate choices are stripped away, is there any stable non-scalar structure
 left to study?
 
-The first public object is deliberately narrow. It studies finite positive
+The current public object is deliberately narrow. It studies finite positive
 weighted two-way tables as residual metric audit objects, proves when centered
 main-effect subspaces are orthogonal, identifies projection order defects under
 non-product weights, and gives an exact rational 2x2 certificate. The point is
@@ -35,6 +35,14 @@ Author:
 
 ```text
 Yifan Chen
+```
+
+Current synthesis package:
+
+```text
+V2.5 final synthesis public draft
+paper/preprint.tex
+paper/preprint.pdf
 ```
 
 Core finite setup:
@@ -78,6 +86,8 @@ The floating-point harness is deterministic regression support only; the mathema
 ```text
 paper/
   preprint.tex
+  preprint.pdf
+  render_contact_sheet.png
 
 certificate/
   exact_witness_certificate.py
@@ -91,6 +101,8 @@ docs/
   claim_boundary_note.md
   duplicate_risk_note.md
   release_notes_v0.1.md
+  release_notes_v0.2.md
+  source_map_and_changelog_v2_5_20260703.md
 ```
 
 ## Reproduce The Exact Certificate
@@ -138,8 +150,11 @@ all_synthetic_controls_passed = true
 This repository is a public sanitized draft surface. The private MaoField
 canonical repository and its historical research state are not mirrored here.
 The duplicate-risk level is currently `MEDIUM`: public descriptions must not
-claim that no close prior work exists. Bibliography metadata should be checked
-again before DOI archiving or formal submission.
+claim that no close prior work exists.
+
+The V2.5 PDF is included as a public draft artifact. No Zenodo DOI, GitHub
+Release, arXiv submission, journal submission or peer-review status is claimed
+by this repository commit.
 
 ## License
 

@@ -26,33 +26,33 @@
 \title{Finite Projection Order Defects in Residual Metric Audits: A Mathematical Starting Point for Black-Box Evaluation}
 \author{Yifan Chen}
 \affil{MaoField research programme}
-\date{3 July 2026}
+\date{July 3, 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Modern language-model evaluation is a coupled measurement procedure rather than a transparent scalar observation: prompt distributions, benchmark axes, judge protocols, rubrics, decoding rules and aggregation weights can all enter the final score. This public draft isolates a finite mathematical obstruction relevant to residual audits of such procedures. On a finite positive weighted two-way table $X=Q\times B$, with weighted Hilbert space $L^2(w)$, let $C$ be the constant subspace, $A$ the centred row-main-effect subspace and $B_0$ the centred column-main-effect subspace. We prove that product weights are equivalent to $A\perp B_0$, and exactly equivalent to order-independence of the two sequential stripping maps $(I-P_{B_0})(I-P_A)(I-P_C)$ and $(I-P_A)(I-P_{B_0})(I-P_C)$. Under non-product weights, there exists a pure main-effect witness whose true additive residual is zero while the wrong stripping order produces a non-zero residual-like output. An exact $2\times2$ rational certificate is given, with squared weighted norm $61/177408$. The MaoField part of this note is programmatic only: it proposes residual metric audits as future work for asking whether capability, safety, reasoning, hallucination, alignment and benchmark scores remain stable under declared changes in weighting, judge protocol and aggregation procedure. No empirical MaoField result is reported.
+Modern language-model evaluation is a coupled measurement procedure rather than a transparent scalar observation: prompt distributions, benchmark axes, judge protocols, rubrics, decoding rules and aggregation weights can all enter the final score. This manuscript isolates a finite mathematical obstruction relevant to residual audits of such procedures. On a finite positive weighted two-way table $X=Q\times B$, with weighted Hilbert space $L^2(w)$, let $C$ be the constant subspace, $A$ the centred row-main-effect subspace and $B_0$ the centred column-main-effect subspace. We prove that product weights are equivalent to $A\perp B_0$, and exactly equivalent to order-independence of the two sequential stripping maps $(I-P_{B_0})(I-P_A)(I-P_C)$ and $(I-P_A)(I-P_{B_0})(I-P_C)$. Under non-product weights, there exists a pure main-effect witness whose true additive residual is zero while the wrong stripping order produces a non-zero residual-like output. An exact $2\times2$ rational certificate is given, with squared weighted norm $61/177408$. The MaoField part of the manuscript is programmatic only: it proposes residual metric audits as future work for studying whether observed capability, safety, reasoning, hallucination, alignment and benchmark scores are invariant model properties or coordinate-dependent artifacts of a weighted evaluation field. No empirical MaoField result is reported.
 \end{abstract}
 
-\paragraph{Public draft status and claim boundary.}
-This manuscript is a public draft in the Open-MaoField repository. It is not peer reviewed, not an arXiv or journal submission, and not a claim of bibliography-finality. The established contribution is the finite-dimensional theorem and its exact rational witness. The MaoField sections are a research programme and set of proposed future audit objects. They do not assert a new broad ANOVA theory, a new dependent-input decomposition theory, a new theory of noncommuting projections, or an empirical finding about language models. The duplicate-risk status is MEDIUM duplicate risk. Mode B MaoField empirical status remains \texttt{insufficient\_artifact}; accordingly, no MaoField empirical positive claim is made or authorized anywhere in this draft.
+\paragraph{Scope and claim boundary.}
+The established mathematical contribution of this manuscript is the finite-dimensional theorem and its exact rational witness. The MaoField sections are a research programme and set of proposed future audit objects. They do not assert a new broad ANOVA theory, a new dependent-input decomposition theory, a new theory of noncommuting projections, or an empirical finding about language models. The duplicate-risk status is MEDIUM duplicate risk. Mode B MaoField empirical status remains \texttt{insufficient\_artifact}; accordingly, no MaoField empirical positive claim is made or authorized anywhere in this manuscript.
 
 \section{Introduction: residuals inside black-box evaluation}
 
-Large language model evaluation is increasingly mediated by complex measurement systems. Large benchmark suites aggregate heterogeneous tasks; holistic evaluations track multiple desiderata; open-ended generation is often judged by human raters or by other language models; and contamination, rephrasing and benchmark exposure can change what a score measures \cite{bigbench2022,helm2022,mtbench2023,geval2023,truthfulqa2021,selfcheckgpt2023,decodingtrust2023,llmevalsurvey2023,contamination2024,rethinkingcontamination2023}. The object being audited is therefore not only a model. It is a model together with a measurement apparatus: prompts, tasks, judges, rubrics, sampling rules, weights and aggregation charts.
+Large language model evaluation is increasingly mediated by complex measurement systems. Large benchmark suites aggregate heterogeneous tasks; holistic evaluations track multiple desiderata; open-ended generation is often judged by human raters or by other language models; and contamination, rephrasing and benchmark exposure can change what a score measures \cite{bigbench2022,helm2022,mtbench2023,geval2023,truthfulqa2021,selfcheckgpt2023,decodingtrust2023,llmevalsurvey2023,contamination2024,rethinkingcontamination2023}. The object being audited is therefore not only a model. It is a model together with a measurement field: prompts, tasks, judges, rubrics, sampling rules, weights and aggregation charts.
 
 A central problem is residual interpretation. A residual is often read as ``what remains after nuisance structure has been removed''. That reading is safe only when the residual is defined by a declared projection, and when the procedure used to compute it is stable under the relevant weighting and chart choices. The finite theorem below shows that even in the smallest two-axis setting, sequentially removing two centred main-effect spaces can be order-dependent unless the table weights factor as a product. In that case, a pure main effect can produce a non-zero wrong-order sequential output even though its true additive residual is exactly zero.
 
-The theorem is deliberately small. It does not explain deployed LLM systems. Its role is to provide an elementary obstruction: if residuals can become procedural artifacts in a finite weighted table, larger black-box metric systems require explicit audits of weighting, nuisance-removal order, judge protocol and aggregation chart before residual-like signals are interpreted as intrinsic model properties.
+The theorem is deliberately small. It does not explain deployed LLM systems. Its role is to provide a minimal obstruction: if residuals can become procedural artifacts in a finite weighted table, larger black-box metric systems require explicit audits of weighting, nuisance-removal order, judge protocol and aggregation chart before residual-like signals are interpreted as intrinsic model properties.
 
 \paragraph{Contributions.}
-This note makes four bounded contributions.
+The manuscript makes four bounded contributions.
 \begin{enumerate}[leftmargin=*,itemsep=2pt]
 \item It proves a finite theorem: on $Q\times B$, centred row and column main-effect spaces are orthogonal if and only if $w(q,b)=w_Q(q)w_B(b)$ cellwise.
 \item It proves that two sequential main-effect stripping maps are equal if and only if the same product-weight condition holds.
 \item It gives an exact $2\times2$ non-product rational witness in which a pure main-effect signal has zero true additive residual but non-zero wrong-order sequential output, with squared weighted norm $61/177408$.
-\item It formulates a MaoField residual metric audit programme as future work: before treating a metric residual as an intrinsic model property, the audit should check its sensitivity to weighting, nuisance-removal order, judge protocol and aggregation chart.
+\item It formulates a MaoField residual metric audit programme as future work: a metric residual should not be interpreted as an intrinsic model property until its invariance under weighting, nuisance-removal order, judge protocol and aggregation chart has been audited.
 \end{enumerate}
 The last item is a proposed criterion and programme statement, not a theorem about deployed LLM systems.
 
@@ -234,7 +234,7 @@ The theorem does not prove that any deployed language-model metric currently con
 
 This section is programmatic. It proposes audit objects for later work; it does not report observations from a MaoField empirical panel.
 
-\subsection{Metrics as measurement apparatuses rather than transparent scores}
+\subsection{Metrics as fields rather than transparent scores}
 
 A language-model score can be represented schematically as
 \[
@@ -263,9 +263,9 @@ This yields concrete future audits:
 \item \textbf{Aggregation audit:} test whether a leaderboard residual survives changes from micro-average to macro-average, stratified weights or temporally updated weights.
 \end{enumerate}
 
-\section{Future mathematical directions}
+\section{Future mathematical objects}
 
-The theorem suggests several possible future directions.
+The theorem suggests several mathematical objects for future work.
 \begin{enumerate}[leftmargin=*,itemsep=2pt]
 \item \textbf{Multi-axis finite audit cubes.} Replace $Q\times B$ by $X_1\times\cdots\times X_m$ and study when nuisance-removal paths produce invariant residuals.
 \item \textbf{Near-product perturbation bounds.} Bound $\|D_w\|$ by a dependence measure such as $\|w-w_Q\otimes w_B\|$ under finite positivity conditions.
@@ -276,13 +276,13 @@ The theorem suggests several possible future directions.
 \item \textbf{Benchmark-contamination coupling certificates.} Build exact finite examples separating model change from contamination-weight coupling.
 \item \textbf{Exact certificate libraries.} Collect rational counterexamples so that audit failures can be reproduced without relying on JSON floats.
 \end{enumerate}
-These are future mathematical problems. The present draft proves only the two-axis finite theorem above.
+These are future mathematical problems. The present manuscript proves only the two-axis finite theorem above.
 
 \section{Related work and duplicate risk}
 
-This draft is adjacent to several established literatures. Dependent-input functional decompositions and sensitivity analysis study attribution when inputs are statistically dependent \cite{hooker2007,chastaing2012,chastaing2015,owenprieur2017,ioossprieur2019,ilidrissi2025,lamboni2026}. Classical two-subspace and projection-product theory studies products, commutators and geometry of projections in greater generality \cite{halmos1969,boettcherspitkovsky2010,corachmaestripieri2010}. Language-model evaluation research has developed broad benchmark suites, holistic evaluation frameworks, model-based judging, truthfulness and hallucination diagnostics, trustworthiness audits and contamination studies \cite{bigbench2022,helm2022,truthfulqa2021,selfcheckgpt2023,geval2023,mtbench2023,decodingtrust2023,llmevalsurvey2023,contamination2024,rethinkingcontamination2023}.
+This manuscript is adjacent to several established literatures. Dependent-input functional decompositions and sensitivity analysis study attribution when inputs are statistically dependent \cite{hooker2007,chastaing2012,chastaing2015,owenprieur2017,ioossprieur2019,ilidrissi2025,lamboni2026}. Classical two-subspace and projection-product theory studies products, commutators and geometry of projections in greater generality \cite{halmos1969,boettcherspitkovsky2010,corachmaestripieri2010}. Language-model evaluation research has developed broad benchmark suites, holistic evaluation frameworks, model-based judging, truthfulness and hallucination diagnostics, trustworthiness audits and contamination studies \cite{bigbench2022,helm2022,truthfulqa2021,selfcheckgpt2023,geval2023,mtbench2023,decodingtrust2023,llmevalsurvey2023,contamination2024,rethinkingcontamination2023}.
 
-The contribution here is narrower than all of these areas: a finite weighted two-way projection-order artifact with an exact rational certificate, plus a programme for applying residual-audit discipline to metric complexes. It does not claim a broad theory of ANOVA, dependent-input decomposition, sensitivity analysis, projection products or language-model evaluation. The duplicate-risk status is MEDIUM duplicate risk. A final bibliography pass should verify all metadata and author spellings against authoritative external records before DOI archiving or formal submission.
+The contribution here is narrower than all of these areas: a finite weighted two-way projection-order artifact with an exact rational certificate, plus a programme for applying residual-audit discipline to metric complexes. It does not claim a broad theory of ANOVA, dependent-input decomposition, sensitivity analysis, projection products or language-model evaluation. The duplicate-risk status is MEDIUM duplicate risk. A final bibliography pass should verify all metadata and author spellings against authoritative external records before any public release path is considered.
 
 \section{Limitations and reproducibility}
 
@@ -298,38 +298,38 @@ The limitations are structural.
 All mathematical statements in the theorem are proved analytically in the text. The $2\times2$ witness is rational and can be checked by exact arithmetic from the displayed weight matrix, witness vector and projection definitions. The floating-point harness is deterministic regression support only; the mathematical claims are carried by the analytic proof and exact rational certificate, not by JSON floats.
 
 \section*{Acknowledgements}
-This public draft is authored by Yifan Chen. Acknowledgements may be expanded in later versions.
+Author and PI acknowledgements should be added only by the human PI.
 
 \begin{thebibliography}{99}
 \bibitem{bigbench2022}
-Srivastava, A. et al. Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models. arXiv:2206.04615v3 (2023).
+Srivastava, A. et al. Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models. arXiv:2206.04615v3 (2022).
 
 \bibitem{helm2022}
-Liang, P. et al. Holistic Evaluation of Language Models. arXiv:2211.09110v2 (2023).
+Liang, P. et al. Holistic Evaluation of Language Models. arXiv:2211.09110v2 (2022).
 
 \bibitem{truthfulqa2021}
-Lin, S., Hilton, J. and Evans, O. TruthfulQA: Measuring How Models Mimic Human Falsehoods. arXiv:2109.07958v2 (2022).
+Lin, S., Hilton, J. and Evans, O. TruthfulQA: Measuring How Models Mimic Human Falsehoods. arXiv:2109.07958 (2021).
 
 \bibitem{selfcheckgpt2023}
-Manakul, P., Liusie, A. and Gales, M. J. F. SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models. arXiv:2303.08896v3 (2023).
+Manakul, P., Liusie, A. and Gales, M. J. F. SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models. arXiv:2303.08896 (2023).
 
 \bibitem{geval2023}
-Liu, Y. et al. G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment. arXiv:2303.16634v3 (2023).
+Liu, Y. et al. G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment. arXiv:2303.16634 (2023).
 
 \bibitem{mtbench2023}
-Zheng, L. et al. Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena. arXiv:2306.05685v4 (2023).
+Zheng, L. et al. Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena. arXiv:2306.05685 (2023).
 
 \bibitem{decodingtrust2023}
-Wang, B. et al. DecodingTrust: A Comprehensive Assessment of Trustworthiness in GPT Models. arXiv:2306.11698v5 (2024).
+Wang, B. et al. DecodingTrust: A Comprehensive Assessment of Trustworthiness in GPT Models. arXiv:2306.11698 (2023).
 
 \bibitem{llmevalsurvey2023}
-Chang, Y. et al. A Survey on Evaluation of Large Language Models. arXiv:2307.03109v9 (2023).
+Chang, Y. et al. A Survey on Evaluation of Large Language Models. arXiv:2307.03109 (2023).
 
 \bibitem{contamination2024}
-Xu, C., Guan, S., Greene, D. and Kechadi, M.-T. Benchmark Data Contamination of Large Language Models: A Survey. arXiv:2406.04244v1 (2024).
+Xu, C., Guan, S., Greene, D. and Kechadi, M.-T. Benchmark Data Contamination of Large Language Models: A Survey. arXiv:2406.04244 (2024).
 
 \bibitem{rethinkingcontamination2023}
-Yang, S., Chiang, W.-L., Zheng, L., Gonzalez, J. E. and Stoica, I. Rethinking Benchmark and Contamination for Language Models with Rephrased Samples. arXiv:2311.04850v2 (2023).
+Yang, S., Chiang, W.-L., Zheng, L., Gonzalez, J. E. and Stoica, I. Rethinking Benchmark and Contamination for Language Models with Rephrased Samples. arXiv:2311.04850 (2023).
 
 \bibitem{hooker2007}
 Hooker, G. Generalized functional ANOVA diagnostics for high-dimensional functions of dependent variables. Journal of Computational and Graphical Statistics 16, 709--732 (2007). doi:10.1198/106186007X237892.
@@ -347,16 +347,16 @@ Owen, A. B. and Prieur, C. On Shapley value for measuring importance of dependen
 Iooss, B. and Prieur, C. Shapley effects for sensitivity analysis with correlated inputs: comparisons with Sobol' indices, numerical estimation and applications. International Journal for Uncertainty Quantification 9, 493--514 (2019). doi:10.1615/INT.J.UNCERTAINTYQUANTIFICATION.2019028372.
 
 \bibitem{ilidrissi2025}
-Il Idrissi, M., Bousquet, N., Gamboa, F., Iooss, B. and Loubes, J.-M. Hoeffding decomposition of functions of random dependent variables. Journal of Multivariate Analysis 208, 105444 (2025). doi:10.1016/j.jmva.2025.105444.
+Il Idrissi, M. et al. Hoeffding decomposition of functions of random dependent variables. Journal of Multivariate Analysis 208, 105444 (2025). doi:10.1016/j.jmva.2025.105444.
 
 \bibitem{lamboni2026}
-Lamboni, M. On ANOVA-Type Decompositions of Functions with Non-independent Variables: Sensitivity Analysis. SIAM/ASA Journal on Uncertainty Quantification 14(2), 691--710 (2026). doi:10.1137/24M1712680.
+Lamboni, M. On ANOVA-type decompositions of functions with non-independent variables: sensitivity analysis. SIAM/ASA Journal on Uncertainty Quantification 14(2), 691--710 (2026). doi:10.1137/24M1712680.
 
 \bibitem{halmos1969}
 Halmos, P. R. Two subspaces. Transactions of the American Mathematical Society 144, 381--389 (1969). doi:10.1090/S0002-9947-1969-0251519-5.
 
 \bibitem{boettcherspitkovsky2010}
-B\"ottcher, A. and Spitkovsky, I. M. A gentle guide to the basics of two projections theory. Linear Algebra and its Applications 432(6), 1412--1459 (2010). doi:10.1016/j.laa.2009.11.002.
+B\"ottcher, A. and Spitkovsky, I. M. A gentle guide to the basics of two projections theory. Linear Algebra and its Applications 432, 1412--1459 (2010). doi:10.1016/j.laa.2009.11.002.
 
 \bibitem{corachmaestripieri2010}
 Corach, G. and Maestripieri, A. Products of orthogonal projections and polar decompositions. arXiv:1011.5237v1 (2010).
