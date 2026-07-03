@@ -1,0 +1,213 @@
+{
+  "schema": "debranded_residual_transport_synthetic_harness_v1_3",
+  "created_utc": "2026-06-29T07:33:26+00:00",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.6",
+    "platform": "Linux-7.0.0-15-generic-x86_64-with-glibc2.43"
+  },
+  "evidence_boundary": {
+    "mode": "Mode A finite-dimensional synthetic theorem controls only",
+    "strongest_allowed_verdict": "definitions_and_harness_viable_only",
+    "mode_b_maofield_empirical_status": "insufficient_artifact",
+    "harness_boundary": "The floating-point harness is deterministic regression support only; the mathematical claims are carried by the analytic proof and exact rational certificate, not by JSON floats.",
+    "proof_responsibility": "The floating-point harness is deterministic regression support only; the mathematical claims are carried by the analytic proof and exact rational certificate, not by JSON floats.",
+    "blocked_claims": [
+      "full_panel_has_run",
+      "sixteen_cell_full_panel_aggregate_exists",
+      "residual_field_observed",
+      "interaction_field_observed",
+      "quotient_residual_field_observed",
+      "transport_field_observed",
+      "holonomy_field_observed",
+      "glass_box_broken",
+      "LOSO_passed",
+      "F3_positive",
+      "training_authorized",
+      "new_loss_authorized",
+      "completed_formal_system",
+      "formal_v1_3_completed"
+    ]
+  },
+  "threshold_contract": {
+    "product_weight_order_independence_control": {
+      "max_product_weight_error": 1e-12,
+      "max_order_defect_fro_norm": 1e-12,
+      "max_basis_order_difference_weighted_norm": 1e-12,
+      "max_q_order_vs_true_residual_basis_norm": 1e-12,
+      "max_b_order_vs_true_residual_basis_norm": 1e-12
+    },
+    "centered_indicator_product_iff_control": {
+      "max_identity_error": 1e-12,
+      "max_product_case_gap": 1e-12,
+      "max_nonproduct_gap_matrix_error": 1e-12,
+      "min_nonproduct_gap_max_abs": 1e-06
+    },
+    "nonproduct_pure_main_effect_no_go_control": {
+      "max_true_additive_residual_norm": 1e-12,
+      "max_zero_order_residual_norm": 1e-12,
+      "max_artifact_vector_inf_error": 1e-12,
+      "min_artifact_weighted_norm": 1e-06,
+      "max_symmetric_witness_vector_inf_error": 1e-12
+    },
+    "threshold_contract_single_source_control": {
+      "require_contract_hash_match": true,
+      "require_per_test_threshold_match": true,
+      "require_central_evaluator": true
+    }
+  },
+  "threshold_contract_sha256": "ec2a3a70dce8d19be5635b2b2a7f51caae17ee8e0a8bce2ec20ed4a55f9a82f6",
+  "all_synthetic_controls_passed": true,
+  "blocks": [
+    {
+      "test_id": "product_weight_order_independence_control",
+      "kind": "theorem_control",
+      "product_weight_max_abs_error": 0.0,
+      "order_defect_fro_norm": 1.7717973386793406e-16,
+      "basis_order_difference_weighted_norm_max": 4.28889218837863e-17,
+      "q_order_vs_true_residual_basis_norm_max": 2.82036942921432e-16,
+      "b_order_vs_true_residual_basis_norm_max": 2.428592636271891e-16,
+      "interpretation": "under product weights, the two ordered stripping maps equal the true additive residual projection",
+      "thresholds": {
+        "max_product_weight_error": 1e-12,
+        "max_order_defect_fro_norm": 1e-12,
+        "max_basis_order_difference_weighted_norm": 1e-12,
+        "max_q_order_vs_true_residual_basis_norm": 1e-12,
+        "max_b_order_vs_true_residual_basis_norm": 1e-12
+      },
+      "threshold_contract_hash": "ec2a3a70dce8d19be5635b2b2a7f51caae17ee8e0a8bce2ec20ed4a55f9a82f6",
+      "evaluated_by": "evaluate_test",
+      "pass": true
+    },
+    {
+      "test_id": "centered_indicator_product_iff_control",
+      "kind": "theorem_control",
+      "product_identity_max_abs_error": 3.469446951953614e-18,
+      "product_gap_max_abs": 0.0,
+      "nonproduct_identity_max_abs_error": 3.469446951953614e-17,
+      "expected_nonproduct_gap_matrix": [
+        [
+          -0.008264462809917356,
+          0.008264462809917356
+        ],
+        [
+          0.008264462809917356,
+          -0.008264462809917356
+        ]
+      ],
+      "observed_nonproduct_gap_matrix": [
+        [
+          -0.008264462809917342,
+          0.008264462809917383
+        ],
+        [
+          0.008264462809917328,
+          -0.008264462809917383
+        ]
+      ],
+      "nonproduct_gap_matrix_max_abs_error": 2.7755575615628914e-17,
+      "nonproduct_gap_max_abs": 0.008264462809917383,
+      "interpretation": "centered indicators recover exactly the product-weight gap cell by cell",
+      "thresholds": {
+        "max_identity_error": 1e-12,
+        "max_product_case_gap": 1e-12,
+        "max_nonproduct_gap_matrix_error": 1e-12,
+        "min_nonproduct_gap_max_abs": 1e-06
+      },
+      "threshold_contract_hash": "ec2a3a70dce8d19be5635b2b2a7f51caae17ee8e0a8bce2ec20ed4a55f9a82f6",
+      "evaluated_by": "evaluate_test",
+      "pass": true
+    },
+    {
+      "test_id": "nonproduct_pure_main_effect_no_go_control",
+      "kind": "no_go_witness_control",
+      "nonproduct_weight_matrix": [
+        [
+          0.09090909090909091,
+          0.18181818181818182
+        ],
+        [
+          0.2727272727272727,
+          0.45454545454545453
+        ]
+      ],
+      "b0_witness": [
+        0.6363636363636364,
+        -0.36363636363636365,
+        0.6363636363636364,
+        -0.36363636363636365
+      ],
+      "true_additive_residual_weighted_norm": 1.2354349359342582e-16,
+      "zero_order_residual_weighted_norm": 6.149655333931273e-17,
+      "artifact_order_vector": [
+        0.03124999999999989,
+        0.029761904761904892,
+        -0.010416666666666706,
+        -0.0119047619047618
+      ],
+      "expected_artifact_order_vector": [
+        0.03125,
+        0.02976190476190476,
+        -0.010416666666666666,
+        -0.011904761904761904
+      ],
+      "artifact_vector_inf_error": 1.3183898417423734e-16,
+      "artifact_weighted_norm": 0.018542928236667137,
+      "artifact_weighted_norm_squared": 0.00034384018759018746,
+      "expected_artifact_weighted_norm_squared": 0.00034384018759018757,
+      "symmetric_a_witness": [
+        0.7272727272727273,
+        0.7272727272727273,
+        -0.2727272727272727,
+        -0.2727272727272727
+      ],
+      "symmetric_artifact_vector": [
+        0.023809523809523614,
+        -0.011904761904761946,
+        0.02232142857142852,
+        -0.013392857142857192
+      ],
+      "expected_symmetric_artifact_vector": [
+        0.023809523809523808,
+        -0.011904761904761904,
+        0.022321428571428572,
+        -0.013392857142857142
+      ],
+      "symmetric_witness_vector_inf_error": 1.942890293094024e-16,
+      "interpretation": "non-product weights can turn a pure main effect into a wrong-order sequential stripping artifact",
+      "thresholds": {
+        "max_true_additive_residual_norm": 1e-12,
+        "max_zero_order_residual_norm": 1e-12,
+        "max_artifact_vector_inf_error": 1e-12,
+        "min_artifact_weighted_norm": 1e-06,
+        "max_symmetric_witness_vector_inf_error": 1e-12
+      },
+      "threshold_contract_hash": "ec2a3a70dce8d19be5635b2b2a7f51caae17ee8e0a8bce2ec20ed4a55f9a82f6",
+      "evaluated_by": "evaluate_test",
+      "pass": true
+    },
+    {
+      "test_id": "threshold_contract_single_source_control",
+      "kind": "meta_contract_control",
+      "runtime_threshold_contract_sha256": "ec2a3a70dce8d19be5635b2b2a7f51caae17ee8e0a8bce2ec20ed4a55f9a82f6",
+      "json_threshold_contract_sha256": "ec2a3a70dce8d19be5635b2b2a7f51caae17ee8e0a8bce2ec20ed4a55f9a82f6",
+      "json_threshold_contract_source": "readback_from_written_json_threshold_contract",
+      "per_test_threshold_mismatches": [],
+      "central_evaluator_function": "evaluate_test",
+      "central_evaluator_used": true,
+      "interpretation": "all pass/fail logic is assigned by evaluate_test against the serialized top-level threshold contract",
+      "thresholds": {
+        "require_contract_hash_match": true,
+        "require_per_test_threshold_match": true,
+        "require_central_evaluator": true
+      },
+      "threshold_contract_hash": "ec2a3a70dce8d19be5635b2b2a7f51caae17ee8e0a8bce2ec20ed4a55f9a82f6",
+      "evaluated_by": "evaluate_test",
+      "pass": true
+    }
+  ],
+  "allowed_interpretation": "v1.3 order-defect theorem controls are internally checkable on finite synthetic examples only as deterministic regression support",
+  "canonical_harness_boundary_sentence": "The floating-point harness is deterministic regression support only; the mathematical claims are carried by the analytic proof and exact rational certificate, not by JSON floats.",
+  "proof_responsibility": "The floating-point harness is deterministic regression support only; the mathematical claims are carried by the analytic proof and exact rational certificate, not by JSON floats.",
+  "forbidden_interpretation": "passing this harness is not a proof artifact, not MaoField empirical evidence, and does not authorize training or a new loss"
+}

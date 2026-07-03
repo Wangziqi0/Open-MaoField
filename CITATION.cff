@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this material, please cite the archived release or repository."
+title: "Finite Projection Order Defects in Residual Metric Audits: A Mathematical Starting Point for Black-Box Evaluation"
+authors:
+  - family-names: "Chen"
+    given-names: "Yifan"
+repository-code: "https://github.com/Wangziqi0/Open-MaoField"
+version: "0.1-public-draft"
+date-released: "2026-07-03"
+license: "Apache-2.0"
+keywords:
+  - "black-box evaluation"
+  - "large language models"
+  - "weighted finite tables"
+  - "orthogonal projections"
+  - "residual metric audits"
+  - "order defects"

@@ -206,6 +206,24 @@ tempCodeRunnerFile.py
 # Ruff stuff:
 .ruff_cache/
 
+# LaTeX build byproducts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# Local release/package byproducts
+*.zip
+*.tar.gz
+*.tmp
+
 # PyPI configuration file
 .pypirc
 
