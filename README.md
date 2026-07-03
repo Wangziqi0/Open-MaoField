@@ -40,7 +40,7 @@ Yifan Chen
 Current synthesis package:
 
 ```text
-V2.5 final synthesis public draft
+v1.0.0 release candidate from the V2.5 final synthesis public draft
 paper/preprint.tex
 paper/preprint.pdf
 ```
@@ -102,6 +102,8 @@ docs/
   duplicate_risk_note.md
   release_notes_v0.1.md
   release_notes_v0.2.md
+  release_notes_v1.0.0.md
+  zenodo_release_checklist_v1.0.0.md
   source_map_and_changelog_v2_5_20260703.md
 ```
 
@@ -147,14 +149,15 @@ all_synthetic_controls_passed = true
 
 ## Release Status
 
-This repository is a public sanitized draft surface. The private MaoField
+This repository is a public sanitized release surface. The private MaoField
 canonical repository and its historical research state are not mirrored here.
 The duplicate-risk level is currently `MEDIUM`: public descriptions must not
 claim that no close prior work exists.
 
-The V2.5 PDF is included as a public draft artifact. No Zenodo DOI, GitHub
-Release, arXiv submission, journal submission or peer-review status is claimed
-by this repository commit.
+The V2.5 PDF is included as the v1.0.0 public manuscript artifact. A Zenodo DOI
+should be cited only after Zenodo has actually archived a GitHub release and
+displayed the DOI. No arXiv submission, journal submission or peer-review status
+is claimed by this repository.
 
 ## License
 

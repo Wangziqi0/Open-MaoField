@@ -1,0 +1,31 @@
+{
+  "title": "Open-MaoField: Finite Projection Order Defects in Residual Metric Audits",
+  "version": "1.0.0",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "apache-2.0",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "Chen, Yifan"
+    }
+  ],
+  "description": "Open-MaoField v1.0.0 is a public, sanitized release surface for the MaoField research programme. It contains a finite-dimensional note on projection order defects in weighted two-way residual metric audits, an exact rational 2x2 certificate, and deterministic regression-harness artifacts. The release is motivated by the lower-level mathematical problem behind black-box LLM evaluation: after scalar metrics, main effects, decoding artifacts, smoothing trends, judge protocols, aggregation weights, and coordinate choices are stripped away, what non-scalar structure remains mathematically well defined? This release does not claim a MaoField empirical positive result, full-panel execution, checkpoint inference, model training, a new optimization loss, deployed-model residual/interaction/transport/holonomy observations, a completed broad theory of ANOVA, dependent-input decomposition, projection products, model collapse, or interpretability. The deterministic harness and JSON files are regression support only; the mathematical claims are carried by the analytic proof and exact rational certificate.",
+  "keywords": [
+    "black-box evaluation",
+    "large language models",
+    "weighted finite tables",
+    "orthogonal projections",
+    "residual metric audits",
+    "order defects",
+    "finite-dimensional mathematics"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Wangziqi0/Open-MaoField",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ],
+  "notes": "Claim boundary: this is a finite mathematical and reproducibility release, not an empirical MaoField positive result or a peer-reviewed publication."
+}
