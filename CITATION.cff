@@ -1,10 +1,12 @@
 cff-version: 1.2.0
-message: "If you use Open-MaoField v1.0.0, cite the archived Zenodo DOI once it exists; otherwise cite the GitHub release or repository."
+message: "If you use Open-MaoField v1.0.0, cite the archived Zenodo repository release DOI."
 title: "Open-MaoField: Finite Projection Order Defects in Residual Metric Audits"
 authors:
   - family-names: "Chen"
     given-names: "Yifan"
 repository-code: "https://github.com/Wangziqi0/Open-MaoField"
+url: "https://github.com/Wangziqi0/Open-MaoField"
+doi: "10.5281/zenodo.21157578"
 version: "1.0.0"
 date-released: "2026-07-03"
 license: "Apache-2.0"

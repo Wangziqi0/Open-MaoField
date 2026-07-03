@@ -1,5 +1,7 @@
 # Open-MaoField
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21157578.svg)](https://doi.org/10.5281/zenodo.21157578)
+
 Open-MaoField is the public, sanitized research surface of the MaoField
 programme. Its long-term target is one of the lowest-level mathematical
 problems behind black-box LLM evaluation: after scalar metrics, main effects,
@@ -154,10 +156,22 @@ canonical repository and its historical research state are not mirrored here.
 The duplicate-risk level is currently `MEDIUM`: public descriptions must not
 claim that no close prior work exists.
 
-The V2.5 PDF is included as the v1.0.0 public manuscript artifact. A Zenodo DOI
-should be cited only after Zenodo has actually archived a GitHub release and
-displayed the DOI. No arXiv submission, journal submission or peer-review status
-is claimed by this repository.
+The V2.5 PDF is included as the v1.0.0 public manuscript artifact. The GitHub /
+Zenodo repository release DOI is:
+
+```text
+10.5281/zenodo.21157578
+```
+
+The Zenodo concept DOI is:
+
+```text
+10.5281/zenodo.21157577
+```
+
+This DOI identifies the archived repository/software release. It is not a
+separate Zenodo `Publication -> Preprint` DOI. No arXiv submission, journal
+submission or peer-review status is claimed by this repository.
 
 ## License
 

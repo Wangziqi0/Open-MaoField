@@ -2,7 +2,19 @@
 
 Date: 2026-07-03
 
-This release candidate prepares Open-MaoField for GitHub-Zenodo archival.
+This release archives Open-MaoField through GitHub-Zenodo.
+
+Repository/software release DOI:
+
+```text
+10.5281/zenodo.21157578
+```
+
+Concept DOI:
+
+```text
+10.5281/zenodo.21157577
+```
 
 Included public artifacts:
 
@@ -39,7 +51,6 @@ Release boundary:
 
 Zenodo boundary:
 
-The `.zenodo.json` file is present so that Zenodo can prefer explicit release
-metadata over `CITATION.cff` during GitHub release archiving. A DOI exists only
-after the repository is enabled in Zenodo and Zenodo successfully archives the
-GitHub release.
+The DOI above identifies the archived repository/software release. It is not a
+separate Zenodo `Publication -> Preprint` DOI. A formal Zenodo preprint would
+require a separate publication upload of the PDF.

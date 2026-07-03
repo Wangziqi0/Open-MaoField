@@ -11,10 +11,26 @@ Date: 2026-07-03
 - [x] Manuscript artifacts exist under `paper/`.
 - [x] Exact certificate and deterministic harness artifacts exist.
 - [x] Claim boundary is explicit in `README.md` and release notes.
-- [ ] GitHub-Zenodo integration has been enabled by the repository owner.
-- [ ] GitHub Release `v1.0.0` has been created after Zenodo integration is enabled.
-- [ ] Zenodo has archived the release and displayed a DOI.
-- [ ] The DOI has been copied back into the repository in a post-release metadata patch.
+- [x] GitHub-Zenodo integration has been enabled by the repository owner.
+- [x] GitHub Release `v1.0.0` has been created after Zenodo integration is enabled.
+- [x] Zenodo has archived the release and displayed a DOI.
+- [x] The DOI has been copied back into the repository in a post-release metadata patch.
+
+## DOI
+
+Repository/software release DOI:
+
+```text
+10.5281/zenodo.21157578
+```
+
+Concept DOI:
+
+```text
+10.5281/zenodo.21157577
+```
+
+This is not a separate Zenodo `Publication -> Preprint` DOI.
 
 ## Human Zenodo Steps
 
