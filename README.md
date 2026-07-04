@@ -1,6 +1,10 @@
 # Open-MaoField
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21157578.svg)](https://doi.org/10.5281/zenodo.21157578)
+Preprint DOI:
+[![Preprint DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21190475.svg)](https://doi.org/10.5281/zenodo.21190475)
+
+Repository/software DOI:
+[![Repository DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21157578.svg)](https://doi.org/10.5281/zenodo.21157578)
 
 Open-MaoField is the public, sanitized research surface of the MaoField
 programme. Its long-term target is one of the lowest-level mathematical
@@ -42,9 +46,15 @@ Yifan Chen
 Current synthesis package:
 
 ```text
-v1.0.0 release candidate from the V2.5 final synthesis public draft
+v1.0.0 public manuscript artifact from the V2.5 final synthesis draft
 paper/preprint.tex
 paper/preprint.pdf
+```
+
+Formal Zenodo preprint:
+
+```text
+10.5281/zenodo.21190475
 ```
 
 Core finite setup:
@@ -156,8 +166,20 @@ canonical repository and its historical research state are not mirrored here.
 The duplicate-risk level is currently `MEDIUM`: public descriptions must not
 claim that no close prior work exists.
 
-The V2.5 PDF is included as the v1.0.0 public manuscript artifact. The GitHub /
-Zenodo repository release DOI is:
+The V2.5 PDF is included as the v1.0.0 public manuscript artifact. A separate
+Zenodo `Publication -> Preprint` record has been published:
+
+```text
+10.5281/zenodo.21190475
+```
+
+Its concept DOI is:
+
+```text
+10.5281/zenodo.21190474
+```
+
+The GitHub / Zenodo repository release DOI is:
 
 ```text
 10.5281/zenodo.21157578
@@ -169,9 +191,18 @@ The Zenodo concept DOI is:
 10.5281/zenodo.21157577
 ```
 
-This DOI identifies the archived repository/software release. It is not a
-separate Zenodo `Publication -> Preprint` DOI. No arXiv submission, journal
-submission or peer-review status is claimed by this repository.
+The repository/software DOI identifies the archived code and reproducibility
+release. The preprint DOI identifies the Zenodo manuscript record. No arXiv
+submission, journal submission or peer-review status is claimed by this
+repository.
+
+Suggested preprint citation:
+
+```text
+Chen, Y. (2026). Finite Projection Order Defects in Residual Metric Audits:
+A Mathematical Starting Point for Black-Box Evaluation. Zenodo.
+https://doi.org/10.5281/zenodo.21190475
+```
 
 ## License
 
